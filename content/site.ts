@@ -28,6 +28,26 @@ export const site = {
     ],
   },
 
+  guestbook: {
+    title: "Leave a note",
+    intro: "Say hi, share a thought, or tell me what you're working on. Your note goes up on the wall for everyone to see.",
+    placeholder: "Write something nice…",
+    namePlaceholder: "Your name (optional)",
+    submit: "Pin it",
+    empty: "No notes yet. Be the first!",
+    thanks: "Thanks! Your note is on the wall.",
+    pendingThanks: "Thanks! Your note will appear once it's approved.",
+    // Longest note a visitor can write, in characters.
+    maxLength: 280,
+    maxNameLength: 40,
+    // Notes per visitor per hour.
+    rateLimit: 3,
+    // Set to true to hide new notes until you approve them at /notes/admin.
+    requireApproval: false,
+    // Notes containing any of these words are turned away. Add your own.
+    blockedWords: ["viagra", "casino", "crypto giveaway", "porn"],
+  },
+
   contact: {
     closing: "Thanks for stopping by!",
     invitation: "I'd love to hear about what you're building. Say hi at **{email}**.",
