@@ -22,6 +22,12 @@
   --wash-1: rgb(250 214 236 / 0.55);
   --wash-2: rgb(218 218 252 / 0.6);
 
+  /* Guestbook note colors, drawn from the same pastels as the wash */
+  --note-1: #fde7f1;
+  --note-2: #e9e7fd;
+  --note-3: #fdeedf;
+  --note-4: #e3f4ec;
+
   /* Font roles: each points at a family loaded in lib/fonts.ts */
   --font-heading-family: var(--font-family-sans);
   --font-subheading-family: var(--font-family-sans);
@@ -47,6 +53,10 @@
   --color-line: var(--line);
   --color-surface: var(--surface);
   --color-chip: var(--chip);
+  --color-note-1: var(--note-1);
+  --color-note-2: var(--note-2);
+  --color-note-3: var(--note-3);
+  --color-note-4: var(--note-4);
 
   --font-heading: var(--font-heading-family), ui-sans-serif, system-ui, sans-serif;
   --font-subheading: var(--font-subheading-family), ui-sans-serif, system-ui, sans-serif;
@@ -148,6 +158,18 @@ section[id] {
   .link-underline:focus-visible {
     background-size: 100% 1px;
   }
+}
+
+/* A freshly pinned note drops onto the wall */
+@keyframes pin {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -18px, 0) rotate(var(--tilt, 0deg)) scale(1.04);
+  }
+}
+
+.note-pin {
+  animation: pin var(--duration-slow) var(--ease-out) both;
 }
 
 @media (prefers-reduced-motion: reduce) {
